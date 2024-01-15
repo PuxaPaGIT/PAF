@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --------------------------- HEADER --------------------------- */
+.header {
+    background-color: #101010;
+    height: 80px; /* Altura */
+    display: flex;
+    position: fixed;
+    width: 100%; /* largura */
+    z-index: 1;
+}
+
+#header-opacidade {
+    transition: background-color 0.3s ease; 
+}
+
+/* --------------------------- HEADER - logo --------------------------- */
+
+.logo img{
+    width: 180px; 
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .header{
+        height: 55px;
+    }
+
+    .icone-perfil i{
+        position: relative;
+        bottom: 13px;
+        left: 10px;
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 125px; 
+        height: auto;
+        position: absolute;
+        top: 13px;
+        left: 15px;
+    }
+}
+
+/* --------------------------- HEADER - icone de perfil --------------------------- */
+
+.icone-perfil {
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.icone-perfil i {
+    color: #fff;
+}
+
+.icone-perfil i:hover {
+    color: #9F0B07;
+    transition: color 0.3s ease;
+}
+
+/* --------------------------- HEADER - menu --------------------------- */
+
+.dropdown {
+    cursor: pointer;
+    user-select: none; /* Impede que o texto seja selecionado pelo usuário. Para evitar que o texto seja destacado ao clicar várias vezes. */
+    -ms-user-select: none; /* Versão específica para o Internet Explorer e Edge para evitar o texto seja destacado. */
+}
+
+.dropdown-menu {
+    display: none; /* Para o menu nao aparecer quando a pagina é carregada */
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    min-width: 200px;
+    min-height: 100px;
+    z-index: 1;
+    border-radius: 10px;
+    backdrop-filter: blur(30px); /* Efeito de desfoque */
+}
+
+.dropdown-menu a {
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    padding-left: 20px;
+    text-decoration: none;
+    display: block; /* O 'display: block;' faz com que as 'a' do menu fiquem em bloco forçando uma quebra de linha antes e depois dos 'a'.*/
+    border-radius: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #9F0B07;
+    transition: background-color 0.1s;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .dropdown-menu {
+        top: 30px;
+    }
+
+}
+
+/* --------------------------- main --------------------------- */
+
+.main {
+    min-height: auto; /* Altura mínima do main */
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.main-conted h1 {
+    color: #F6F6F6;
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+
+.main-conted h2 {
+    color: #F6F6F6;
+    margin-bottom: 20px; 
+}
+
+.main-conted p {
+    color: #8F8F8F;
+    margin-bottom: 100px;
+    line-height: 1.5;  /* Deixa espaço entre o texto*/
+}
+
+.main-conted {
+    padding: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .main {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    
+    .main {
+        font-size: 13px;
+    }
+}
+
+/* --------------------------- Footer --------------------------- */
+
+.footer {
+    width: 100%;
+}
+
+.footer_content {
+    display: grid; /* layout grid organizados em uma estrutura de linhas e colunas */
+    grid-template-columns: repeat(5, 1fr); /*fr = fração é uma unidade de medida para o espaço  */
+    background-color: #101010;
+    padding: 20px; /* Espaço entre o conteudo e as bordas do elemento */
+    height: 250px;
+    color: #fff;
+    white-space: nowrap; /* evita a quebra de linha */
+}
+
+/* --------------------------- footer list e link --------------------------- */
+
+.footer_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Faz com que os links fiquem mais a baixo em relação ao h3 */
+    list-style-type: none; /* tira os estilos do texto */
+    position: relative;
+    top: 20px;
+    left: 55px;
+}
+
+.footer_list .footer_link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_link:hover {
+    color: #9F0B07;
+    transition: 0.1s ease;
+}
+
+/* --------------------------- footer - logo --------------------------- */
+
+.footer_logo img{
+    position: relative;
+    height: 45px;
+    width: auto;
+    left: 15px;
+    top: 10px;
+}
+
+/* --------------------------- footer - social media --------------------------- */
+
+.footer_link_social {
+    text-decoration: none;
+}
+
+.footer_link_social  i{
+    position: relative;
+    padding-right: 10px;
+    top: 30px;
+    right: 20px;
+    font-size: 40px;
+}
+
+.footer_social_media h3 {
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.footer_link_social:hover {
+    opacity: 0.5;
+}
+
+#facebook {
+    color: #2442c9;
+}
+
+#twitter {
+    color: #20b9c4;
+}
+
+#instagram {
+    color: #ad24c9;
+}
+
+#youtube {
+    color: #d11d1d;
+}
+
+/* --------------------------- footer - copyright --------------------------- */
+
+.footer_copyright p{
+    position: relative;
+    top: 60px;
+    left: 12px;
+}
+
+.hr {
+    position: absolute;
+    top: auto;
+    margin-top: 20px;
+    left: 33px;
+    width: 95%; /* Defina a largura */
+    border: none; /* Remova a borda padrão */
+    height: 1px; /* Ajuste a altura (espessura) desejada */
+    background-color: #9F0B07; /* Defina a cor desejada */
+}
+
+/* --------------------------- tamanho da tela - footer --------------------------- */
+
+@media screen and (max-width: 1100px) {
+
+    .footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px; /* espaço entre elementos */
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 110px;
+        top: 0;
+    }
+
+    .footer_social_media i {
+        position: relative;
+        top: 20px;
+        left: 8px;
+    }
+
+    .footer_social_media h3 {
+        position: relative;
+        top: 5px;
+        left: 70px;
+    }
+
+
+    .footer_logo img {
+        display: none;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .footer_copyright {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .footer_content {
+        font-size: 14px;
+    }
+
+    .footer_social_media i {
+        font-size: 30px;
+    }
+
+    .footer_social_media h3 {
+        position: relative;
+        left: 52px;
+        top: 0;
+    }
+
+}

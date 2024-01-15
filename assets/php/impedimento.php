@@ -1,0 +1,10 @@
+<?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+
+    if(!isset($_SESSION['email'])) {
+        header("Location:/login-register.html");
+        exit(); // o script para de executar
+    }
+?>

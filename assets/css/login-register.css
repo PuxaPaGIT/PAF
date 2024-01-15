@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --------------------------- HEADER - logo --------------------------- */
+
+.logo img{
+    width: 180px; 
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+
+/* --------------------------------- LOGIN E REGISTAR --------------------------- */
+
+.form-registar, .form-login{
+    text-align: center; 
+    color: #fff;
+}
+
+.form-registar p, .form-login p {
+    padding: 20px;
+}
+
+.form-registar h2, .form-login h2 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.form-login input:hover, .form-registar input:hover {
+    border: 2px solid #9F0B07;
+    transition: 0.3s;
+}
+
+.form-login button:hover, .form-registar button:hover {
+    background-color: #940904;
+    transition: 0.3s;
+}
+
+.form-login input, .form-registar input {
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #5a5a5a;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: #fff;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-login button, .form-registar button {
+    background-color: #9F0B07;
+    color: #fff;
+    padding: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0px solid #5a5a5a;
+    margin-top: 10px;
+}
+
+.form-login input:focus, .form-registar input:focus { /* focus é quando o input esta selecionado*/
+    border-color: #9F0B07;
+    outline: none;
+}
+
+.login-registar p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-registar p a:hover {
+    color: #9F0B07; 
+}
+
+/* --------------------------- DIVIDIR ECRA DE LOTGIN E REGISTAR --------------------------- */
+
+.dividir-ecra {
+    display: flex;
+    min-height: 100vh; /* Altura mínima de 100% da altura da janela */
+}
+
+.lado-esquerdo {
+    flex: 1; /*--- serve para dividir o numero 1 divide ao meio se eu colocar outros numeros divide de formas diferentes ---*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-direito {
+    flex: 1; /*--- serve para dividir o numero 1 divide ao meio se eu colocar outros numeros divide de formas diferentes ---*/
+    background-image: url("../Imagens/Gordon\ Ramsay.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* --------------------------- main --------------------------- */
+
+main {
+    background-color: #272727;
+}
+
+/* ---------------------- media screedn ----------------------- */
+
+@media screen and (max-width:800px) {
+
+    .lado-direito {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .logo img{
+        position: absolute;
+        left: auto;
+        margin-left: 85px;
+    }
+
+}
+

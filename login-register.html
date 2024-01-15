@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chef Virtual - Receitas Deliciosas</title>
+    <link rel="stylesheet" href="assets/css/login-register.css">
+</head>
+
+<main class="main">
+
+    <div class="dividir-ecra">
+
+        <div class="lado-esquerdo">
+
+            <div class="logo">
+                <a href="index.php">
+                <img  src="assets/Imagens/Logo.png">
+                </a>
+            </div>
+
+            <div class="login-registar">
+
+                <div class="form-login">
+                    <h2>Iniciar Sessão</h2>
+
+                    <form action="assets/php/login-register.php" method="post">
+                        <input name="Email-login" type="text" id="Email" placeholder="E-mail">
+                        <input name="Password-login" type="password" placeholder="*********">
+                        <button type="submit">Submeter</button>
+                    </form>
+
+                    <p> <a href="#" onclick="mostrarFormRegistar()">Registar para uma conta CV</a></p>
+                </div>
+
+                <div class="form-registar" style="display: none;">
+                    <h2>Registe-se</h2>
+
+                    <form action="assets/php/login-register.php" method="post">
+                        <input name="Nome-register" type="text" placeholder="Nome de utilizador">
+                        <input name="Email-register" type="email" placeholder="E-mail">
+                        <input name="Password-register" type="password" placeholder="Palavra-passe">
+                        <button type="submit">Submeter</button>
+                    </form>
+
+                    <p> <a href="#" onclick="mostrarFormLogin()"> « Voltar</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="lado-direito"></div>
+
+    </div>
+
+    <script src="assets/js/login-register.js"></script>
+
+</main>
+
+</html>
